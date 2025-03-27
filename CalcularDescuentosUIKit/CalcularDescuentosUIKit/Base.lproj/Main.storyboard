@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CalcularDescuentosUIKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ClJ-g1-tMN">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calcular descuentos" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDP-mK-zD9">
+                                <rect key="frame" x="16" y="59" width="246" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="R7I-jB-KNd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descuento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hRu-sO-MUA">
+                                <rect key="frame" x="155" y="126" width="83" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="aZh-US-l8v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00 €" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SJh-tX-ORQ">
+                                <rect key="frame" x="165" y="155" width="63" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="rG0-Co-kL5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precio con descuento aplicado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UpI-Hg-L4x">
+                                <rect key="frame" x="77" y="201" width="234" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="nkA-q6-KMx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00 €" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRv-e4-4Si">
+                                <rect key="frame" x="165" y="230" width="63" height="27"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="27" id="Dax-jj-qDf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1457.00 €" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DPU-b1-kbl">
+                                <rect key="frame" x="16" y="315" width="230" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="2FV-Gx-cmg"/>
+                                    <constraint firstAttribute="height" constant="34" id="hfa-7P-GVZ"/>
+                                    <constraint firstAttribute="width" constant="230" id="p1X-A0-j0c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FzD-R8-5kS">
+                                <rect key="frame" x="151" y="409" width="86" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="JOg-wh-gJX"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Calcular"/>
+                                <connections>
+                                    <action selector="calcularDescuento:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mv8-z4-eGe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X23-xL-6PJ">
+                                <rect key="frame" x="154" y="465" width="81" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="z42-xQ-4wd"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Limpiar"/>
+                                <connections>
+                                    <action selector="limpiarCampos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GNq-Ei-2lL"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="20 %" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4iK-Gf-xcN">
+                                <rect key="frame" x="272" y="315" width="105" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="BA0-7T-jE7"/>
+                                    <constraint firstAttribute="height" constant="34" id="SRB-ht-Nia"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="o4t-JR-gC6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lbC-1h-smb"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="lbC-1h-smb" firstAttribute="trailing" secondItem="X23-xL-6PJ" secondAttribute="trailing" constant="158" id="2PR-bK-FFr"/>
+                            <constraint firstItem="lDP-mK-zD9" firstAttribute="top" secondItem="lbC-1h-smb" secondAttribute="top" id="CPz-xD-iNt"/>
+                            <constraint firstItem="DPU-b1-kbl" firstAttribute="centerX" secondItem="ClJ-g1-tMN" secondAttribute="centerX" id="DPk-0Q-Zv1"/>
+                            <constraint firstItem="FzD-R8-5kS" firstAttribute="top" secondItem="DPU-b1-kbl" secondAttribute="bottom" constant="60" id="Da8-Ap-aVK"/>
+                            <constraint firstItem="4iK-Gf-xcN" firstAttribute="centerY" secondItem="ClJ-g1-tMN" secondAttribute="centerY" id="JeG-G5-hs5"/>
+                            <constraint firstItem="lbC-1h-smb" firstAttribute="trailing" secondItem="lDP-mK-zD9" secondAttribute="trailing" constant="131" id="L9S-RR-occ"/>
+                            <constraint firstItem="lDP-mK-zD9" firstAttribute="leading" secondItem="lbC-1h-smb" secondAttribute="leading" constant="16" id="MDt-Ti-Oy0"/>
+                            <constraint firstItem="lbC-1h-smb" firstAttribute="trailing" secondItem="SJh-tX-ORQ" secondAttribute="trailing" constant="165" id="McR-Cw-bI5"/>
+                            <constraint firstItem="lbC-1h-smb" firstAttribute="trailing" secondItem="FzD-R8-5kS" secondAttribute="trailing" constant="156" id="Nds-YP-j5S"/>
+                            <constraint firstItem="DPU-b1-kbl" firstAttribute="top" secondItem="bRv-e4-4Si" secondAttribute="bottom" constant="58" id="Nog-UZ-g8o"/>
+                            <constraint firstItem="4iK-Gf-xcN" firstAttribute="leading" secondItem="DPU-b1-kbl" secondAttribute="trailing" constant="69" id="PVb-Ix-qbg"/>
+                            <constraint firstItem="4iK-Gf-xcN" firstAttribute="top" secondItem="bRv-e4-4Si" secondAttribute="bottom" constant="58" id="Qz1-SC-jrq"/>
+                            <constraint firstItem="SJh-tX-ORQ" firstAttribute="leading" secondItem="lbC-1h-smb" secondAttribute="leading" constant="165" id="R54-md-4ZE"/>
+                            <constraint firstItem="DPU-b1-kbl" firstAttribute="centerY" secondItem="ClJ-g1-tMN" secondAttribute="centerY" id="Tha-Pu-6Mg"/>
+                            <constraint firstItem="4iK-Gf-xcN" firstAttribute="centerX" secondItem="ClJ-g1-tMN" secondAttribute="centerX" id="U2H-wn-yAa"/>
+                            <constraint firstItem="lbC-1h-smb" firstAttribute="trailing" secondItem="4iK-Gf-xcN" secondAttribute="trailing" constant="16.333333333333371" id="Vuk-fx-oHE"/>
+                            <constraint firstItem="X23-xL-6PJ" firstAttribute="leading" secondItem="lbC-1h-smb" secondAttribute="leading" constant="154" id="WID-Ax-ote"/>
+                            <constraint firstItem="DPU-b1-kbl" firstAttribute="leading" secondItem="lbC-1h-smb" secondAttribute="leading" constant="16" id="XRk-6E-wgJ"/>
+                            <constraint firstItem="bRv-e4-4Si" firstAttribute="top" secondItem="UpI-Hg-L4x" secondAttribute="bottom" constant="8" symbolic="YES" id="ZWp-uf-ORJ"/>
+                            <constraint firstItem="X23-xL-6PJ" firstAttribute="top" secondItem="FzD-R8-5kS" secondAttribute="bottom" constant="21" id="dee-0f-SbZ"/>
+                            <constraint firstItem="bRv-e4-4Si" firstAttribute="leading" secondItem="lbC-1h-smb" secondAttribute="leading" constant="165" id="ox0-9d-sU9"/>
+                            <constraint firstItem="hRu-sO-MUA" firstAttribute="leading" secondItem="lbC-1h-smb" secondAttribute="leading" constant="155" id="qus-eK-RTw"/>
+                            <constraint firstItem="SJh-tX-ORQ" firstAttribute="top" secondItem="hRu-sO-MUA" secondAttribute="bottom" constant="8" symbolic="YES" id="r5n-l9-H67"/>
+                            <constraint firstItem="UpI-Hg-L4x" firstAttribute="top" secondItem="lbC-1h-smb" secondAttribute="top" constant="142" id="rey-bf-wTo"/>
+                            <constraint firstItem="hRu-sO-MUA" firstAttribute="top" secondItem="lDP-mK-zD9" secondAttribute="bottom" constant="33" id="tsR-Qo-gmO"/>
+                            <constraint firstItem="lbC-1h-smb" firstAttribute="trailing" secondItem="bRv-e4-4Si" secondAttribute="trailing" constant="165" id="uxW-6G-yD2"/>
+                            <constraint firstItem="UpI-Hg-L4x" firstAttribute="leading" secondItem="lbC-1h-smb" secondAttribute="leading" constant="77" id="vN0-qv-K9b"/>
+                            <constraint firstItem="FzD-R8-5kS" firstAttribute="leading" secondItem="lbC-1h-smb" secondAttribute="leading" constant="151" id="yKh-rJ-jf9"/>
+                            <constraint firstItem="lbC-1h-smb" firstAttribute="trailing" secondItem="UpI-Hg-L4x" secondAttribute="trailing" constant="82" id="yN7-rc-XOt"/>
+                            <constraint firstItem="lbC-1h-smb" firstAttribute="trailing" secondItem="hRu-sO-MUA" secondAttribute="trailing" constant="155" id="zNc-JW-PUH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="descuentoLabel" destination="SJh-tX-ORQ" id="GEo-Gb-YtJ"/>
+                        <outlet property="porcentajeDescuentoTextField" destination="4iK-Gf-xcN" id="TF3-Kb-l2h"/>
+                        <outlet property="precioFinalLabel" destination="bRv-e4-4Si" id="iAd-Wt-XOL"/>
+                        <outlet property="precioOriginalTextField" destination="DPU-b1-kbl" id="FzK-mq-jmU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="45" y="-34"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

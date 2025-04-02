@@ -68,6 +68,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tablaNotasListadas" destination="Trq-xX-VGW" id="MaS-lV-Shg"/>
+                        <segue destination="IUx-0D-6fU" kind="show" identifier="editarNotaSegue" id="5sT-3f-fKe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -161,6 +162,9 @@
             <point key="canvasLocation" x="2017.5572519083969" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="5sT-3f-fKe"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">

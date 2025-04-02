@@ -38,6 +38,39 @@ final class HomeViewController: UIViewController, UITableViewDelegate, UITableVi
 		return celda
 	}
 	
+	func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+		let eliminar = UIContextualAction(style: .destructive, title: "Eliminar") { (_, _, _) in
+			let contexto = Nota.shared.contexto()
+			let nota = self.fetchResultController.object(at: indexPath)
+			contexto.delete(nota)
+			do {
+				try contexto.save()
+			} catch let error as NSError {
+				print("Error eliminando nota", error)
+			}
+		}
+		eliminar.image = UIImage(systemName: "trash")
+		let editar = UIContextualAction(style: .normal, title: "Editar") { (_, _, _) in
+			print( "Editar nota")
+		}
+		editar.image = UIImage(systemName: "pencil")
+		return UISwipeActionsConfiguration(actions: [eliminar, editar])
+	}
+	
+	func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		performSegue(withIdentifier: "editarNotaSegue", sender: self)
+	}
+	
+	override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+		if segue.identifier == "editarNotaSegue" {
+			if let id = tablaNotasListadas.indexPathForSelectedRow {
+				let fila = notas[id.row]
+				let destino = segue.destination as? AddViewController
+				destino?.notaEditar = fila
+			}
+		}
+	}
+	
 	func obtenerNotas() {
 		let contexto = Nota.shared.contexto()
 		let fetchRequest = Notas.fetchRequest()

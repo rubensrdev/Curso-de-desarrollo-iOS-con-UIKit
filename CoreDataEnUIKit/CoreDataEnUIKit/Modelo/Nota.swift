@@ -40,4 +40,18 @@ final class Nota {
 		}
 	}
 	
+	
+	func editar(_ nota: NotaModel, _ notaEditar: Notas) {
+		let contexto = contexto()
+		notaEditar.setValue(nota.titulo, forKey: "titulo")
+		notaEditar.setValue(nota.descripcion, forKey: "descripcion")
+		notaEditar.setValue(nota.fecha, forKey: "fecha")
+		
+		do {
+			try contexto.save()
+			print("Nota editada")
+		} catch let error as NSError {
+			print("No se pudo editar la nota: \(error), \(error.userInfo)")
+		}
+	}
 }

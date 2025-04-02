@@ -24,6 +24,7 @@ class AddViewController: UIViewController {
 		   let descripcion = notaTextview.text, !descripcion.isEmpty {
 			let nota = NotaModel(titulo: titulo, descripcion: descripcion, fecha: fechaDatePicker.date)
 			Nota.shared.guardar(nota)
+			navigationController?.popViewController(animated: true)
 		}
 		
 	}

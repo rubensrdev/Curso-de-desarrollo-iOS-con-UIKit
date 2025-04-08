@@ -7,6 +7,8 @@
 
 import UIKit
 
+/// Vista controladora que representa una única pantalla del onboarding.
+/// Esta clase es reutilizada para las distintas páginas, recibiendo contenido dinámico desde el `PageViewController`.
 class OnboardingContentViewController: UIViewController {
 
 	@IBOutlet weak var imagenView: UIImageView!
@@ -20,11 +22,14 @@ class OnboardingContentViewController: UIViewController {
 	
 	override func viewDidLoad() {
         super.viewDidLoad()
+		// Se asignan los valores pasados desde el PageViewController
 		imagenView.image = UIImage(named: imagen ?? "")
 		tituloLabel.text = titulo
 		descripcionLabel.text = descripcion
     }
 
+	/// Acción que finaliza el onboarding y marca en UserDefaults que ya ha sido completado.
+	/// Desde aquí se debe redirigir a la pantalla principal de la aplicación.
 	@IBAction func finalizarOnBoarding(_ sender: Any) {
 		UserDefaults.standard.set(true, forKey: "onBoardingCompletado")
 		// TODO: Ir a la vista principal

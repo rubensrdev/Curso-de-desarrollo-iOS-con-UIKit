@@ -12,6 +12,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 	var window: UIWindow?
 
 
+	/// Método del ciclo de vida de la escena que se ejecuta al iniciar la aplicación.
+	/// Decide qué vista debe mostrarse: el onboarding (si es la primera vez) o la vista principal.
+	///
+	/// - Parameters:
+	///   - scene: La escena conectada.
+	///   - session: Sesión asociada.
+	///   - connectionOptions: Opciones de conexión al lanzar la app (por ejemplo, notificaciones).
 	func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 		guard let windowScene = (scene as? UIWindowScene) else { return }
 

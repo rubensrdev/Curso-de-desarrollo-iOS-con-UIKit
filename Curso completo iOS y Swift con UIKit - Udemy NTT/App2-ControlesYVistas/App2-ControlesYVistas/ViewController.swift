@@ -24,6 +24,8 @@ class ViewController: UIViewController {
 	@IBOutlet weak var myActivityIndicator: UIActivityIndicatorView!
 	@IBOutlet weak var myStepperLabel: UILabel!
 	@IBOutlet weak var mySwitchLabel: UILabel!
+	@IBOutlet weak var myTextField: UITextField!
+	@IBOutlet weak var myTextView: UITextView!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -79,6 +81,15 @@ class ViewController: UIViewController {
 		mySwitchLabel.font = UIFont.boldSystemFont(ofSize: 16)
 		mySwitchLabel.text = "Apagado"
 		
+		// Textfield
+		myTextField.delegate = self
+		myTextField.placeholder = "Escribe aquí un texto"
+		myTextField.textColor = .blue
+		
+		// TextView
+		myTextView.text = "Este es un texto largo.Este es un texto largo.Este es un texto largo.Este es un texto largo.Este es un texto largo.Este es un texto largo.Este es un texto largo.Este es un texto largo.Este es un texto largo.Este es un texto largo.Este es un texto largo.Este es un texto largo.Este es un texto largo.Este es un texto largo.Este es un texto largo.Este es un texto largo.Este es un texto largo.Este es un texto largo.Este es un texto largo.Este es un texto largo.Este es un texto largo.Este es un texto largo.Este es un texto largo.Este es un texto largo.Este es un texto largo.Este es un texto largo.Este es un texto largo.Este es un texto largo.Este es un texto largo.Este es un texto largo.Este es un texto largo."
+		myTextView.textColor = .red
+		myTextView.isEditable = false
 	}
 
 	// Actions
@@ -152,6 +163,7 @@ class ViewController: UIViewController {
 	
 }
 
+// Picker
 extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
 	func numberOfComponents(in pickerView: UIPickerView) -> Int {
 		1
@@ -169,6 +181,16 @@ extension ViewController: UIPickerViewDelegate, UIPickerViewDataSource {
 		myButton.setTitle(numeros[row], for: .normal)
 		myPageControl.currentPage = row
 		mySegmentedControl.selectedSegmentIndex = row
+	}
+}
+
+// Textfield
+extension ViewController: UITextFieldDelegate {
+	func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+		textField.resignFirstResponder()
+	}
+	func textFieldDidEndEditing(_ textField: UITextField) {
+		myButton.setTitle(textField.text, for: .normal)
 	}
 }
 
